@@ -1,0 +1,18 @@
+# appends .bashrc below
+# if [ -f ~/.bash_ext ]; then
+#     . ~/.bash_ext
+# fi
+
+# activate linuxbrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# activate bash_completion
+[[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && \
+  . "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+# activate anyenv
+eval "$(anyenv init -)"
+
+# configurations
+if [ -f ~/.bash_prompt ]; then
+    . ~/.bash_prompt
+fi
+

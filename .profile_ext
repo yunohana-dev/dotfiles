@@ -1,0 +1,10 @@
+# appends .profile below
+# if [ -f ~/.profile_ext ]; then
+#     . ~/.profile_ext
+# fi
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+export AWS_DEFAULT_PROFILE=saml
+export GPG_TTY=$(tty)
+export NPM_TOKEN=
+export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=
+
