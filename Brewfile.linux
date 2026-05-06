@@ -35,6 +35,8 @@ brew "vim"
 brew "neovim"
 brew "tig"
 brew "anyenv"
+brew "ghq"
+brew "peco"
 
 # aws
 brew "saml2aws"
