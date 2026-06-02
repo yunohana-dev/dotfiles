@@ -16,6 +16,8 @@ return {
     vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
     cmp.setup({
+      preselect = cmp.PreselectMode.None,
+
       snippet = {
         expand = function(args) luasnip.lsp_expand(args.body) end,
       },
@@ -27,7 +29,7 @@ return {
 
       mapping = cmp.mapping.preset.insert({
         ["<C-Space>"] = cmp.mapping.complete(),
-        ["<CR>"]      = cmp.mapping.confirm({ select = false }), -- 明示的に選択した候補のみ確定
+        ["<CR>"]      = cmp.mapping.confirm({ select = false }),
         ["<Tab>"]     = cmp.mapping.select_next_item(),
         ["<S-Tab>"]   = cmp.mapping.select_prev_item(),
         ["<C-e>"]     = cmp.mapping.abort(),
