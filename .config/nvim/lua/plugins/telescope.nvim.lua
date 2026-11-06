@@ -28,8 +28,9 @@ return {
     telescope.load_extension("fzf")
 
     -- ファイル名曖昧検索（git 管理下のみ）
-    vim.keymap.set("n", "<M-f>",     builtin.git_files, { silent = true })
-    vim.keymap.set("n", "<leader>b", builtin.buffers,   { silent = true })
+    vim.keymap.set("n", "<M-f>", builtin.git_files, { silent = true })
+    vim.keymap.set("n", "<M-F>", builtin.live_grep, { silent = true })
+    vim.keymap.set("n", "<leader>b", builtin.buffers, { silent = true })
     -- vim.keymap.set("n", "<leader>g", builtin.live_grep, { silent = true })
   end,
 }

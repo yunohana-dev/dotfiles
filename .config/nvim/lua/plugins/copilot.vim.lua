@@ -9,7 +9,7 @@ return {
       replace_keycodes = false,
       silent = true,
     })
-    vim.keymap.set("i", "<M-]>", "<Plug>(copilot-next)",     { silent = true })
+    vim.keymap.set("i", "<M-]>", "<Plug>(copilot-next)", { silent = true })
     vim.keymap.set("i", "<M-[>", "<Plug>(copilot-previous)", { silent = true })
   end,
 }

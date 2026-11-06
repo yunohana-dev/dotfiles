@@ -38,6 +38,7 @@ return {
 
       git = {
         enable  = true,
+        ignore  = false,
         timeout = 500,
       },
 
@@ -66,8 +67,10 @@ return {
         local opts = { buffer = bufnr, silent = true, nowait = true }
 
         api.config.mappings.default_on_attach(bufnr)
+        vim.keymap.del("n", "r", { buffer = bufnr })
+        vim.keymap.set("n", "<F2>", api.fs.rename, opts)
         vim.keymap.set("n", "x", api.node.navigate.parent_close, opts)
-        vim.keymap.set("n", "X", api.tree.collapse_all,          opts)
+        vim.keymap.set("n", "X", api.tree.collapse_all, opts)
       end,
     })
 
